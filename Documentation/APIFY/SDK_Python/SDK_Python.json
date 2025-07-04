@@ -1,0 +1,94 @@
+[
+  {
+    "url": "https://docs.apify.com/sdk/python/",
+    "title": "SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/overview/introduction",
+    "title": "Introduction | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/overview/running-actors-locally",
+    "title": "Running Actors locally | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/overview/actor-structure",
+    "title": "Actor structure | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/guides/beautifulsoup-httpx",
+    "title": "Using BeautifulSoup with HTTPX | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/guides/crawlee",
+    "title": "Using Crawlee | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/guides/playwright",
+    "title": "Using Playwright | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/guides/selenium",
+    "title": "Using Selenium | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/guides/scrapy",
+    "title": "Using Scrapy | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/concepts/actor-lifecycle",
+    "title": "Actor lifecycle | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/concepts/actor-input",
+    "title": "Actor input | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/concepts/storages",
+    "title": "Working with storages | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/concepts/actor-events",
+    "title": "Actor events & state persistence | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/concepts/proxy-management",
+    "title": "Proxy management | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/concepts/interacting-with-other-actors",
+    "title": "Interacting with other Actors | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/concepts/webhooks",
+    "title": "Creating webhooks | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/concepts/access-apify-api",
+    "title": "Accessing Apify API | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/concepts/running-webserver",
+    "title": "Running webserver in your Actor | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/concepts/logging",
+    "title": "Logging | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/concepts/actor-configuration",
+    "title": "Actor configuration | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/concepts/pay-per-event",
+    "title": "Pay-per-event monetization | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/upgrading/upgrading-to-v2",
+    "title": "Upgrading to v2 | SDK for Python | Apify Documentation"
+  },
+  {
+    "url": "https://docs.apify.com/sdk/python/docs/changelog",
+    "title": "Changelog | SDK for Python | Apify Documentation"
+  }
+]

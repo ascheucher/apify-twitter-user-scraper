@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.apify.com)",
+      "WebFetch(domain:docs.apify.com)",
+      "WebFetch(domain:docs.apify.com)",
+      "WebFetch(domain:docs.apify.com)",
+      "Bash(ls:*)",
+      "Bash(grep:*)",
+      "Bash(python3:*)"
+    ],
+    "deny": []
+  }
+}

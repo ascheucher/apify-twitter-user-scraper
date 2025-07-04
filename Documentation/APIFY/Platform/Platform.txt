@@ -1,0 +1,215 @@
+Home | Platform | Apify Documentation
+https://docs.apify.com/platform
+
+Apify Console | Platform | Apify Documentation
+https://docs.apify.com/platform/console
+
+Store | Platform | Apify Documentation
+https://docs.apify.com/platform/console/store
+
+Billing | Platform | Apify Documentation
+https://docs.apify.com/platform/console/billing
+
+Settings | Platform | Apify Documentation
+https://docs.apify.com/platform/console/settings
+
+Two-factor authentication | Platform | Apify Documentation
+https://docs.apify.com/platform/console/two-factor-authentication
+
+Actors | Platform | Apify Documentation
+https://docs.apify.com/platform/actors
+
+Automated tests | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/automated-tests
+
+Performance | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/performance
+
+Publishing and monetization | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/publishing
+
+Publish your Actor | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/publishing/publish
+
+Monetize your Actor | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/publishing/monetize
+
+Automated testing | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/publishing/test
+
+Actor status badge | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/publishing/status-badge
+
+Running Actors | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/running
+
+Actors in Store | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/running/actors-in-store
+
+Input and output | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/running/input-and-output
+
+Runs and builds | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/running/runs-and-builds
+
+Usage and resources | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/running/usage-and-resources
+
+Actor tasks | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/running/tasks
+
+Standby mode | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/running/standby
+
+Development | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development
+
+Quick start | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/quick-start
+
+Local development | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/quick-start/locally
+
+Web IDE | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/quick-start/web-ide
+
+Actor definition | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/actor-definition
+
+actor.json | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/actor-definition/actor-json
+
+Input schema | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/actor-definition/input-schema
+
+Specification | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/actor-definition/input-schema/specification/v1
+
+Secret input | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/actor-definition/input-schema/secret-input
+
+Dataset schema | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/actor-definition/dataset-schema
+
+Dataset validation | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/actor-definition/dataset-schema/validation
+
+Dockerfile | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/actor-definition/dockerfile
+
+Source code | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/actor-definition/source-code
+
+Programming interface | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/programming-interface
+
+Basic commands | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/programming-interface/basic-commands
+
+Environment variables | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/programming-interface/environment-variables
+
+Status messages | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/programming-interface/status-messages
+
+System events | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/programming-interface/system-events
+
+Container web server | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/programming-interface/container-web-server
+
+Metamorph | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/programming-interface/metamorph
+
+Standby mode | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/programming-interface/standby
+
+Deployment | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/deployment
+
+Source types | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/deployment/source-types
+
+Continuous integration | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/deployment/continuous-integration
+
+Builds and runs | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/builds-and-runs
+
+Builds | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/builds-and-runs/builds
+
+Runs | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/builds-and-runs/runs
+
+State persistence | Platform | Apify Documentation
+https://docs.apify.com/platform/actors/development/builds-and-runs/state-persistence
+
+Schedules | Platform | Apify Documentation
+https://docs.apify.com/platform/schedules
+
+Storage | Platform | Apify Documentation
+https://docs.apify.com/platform/storage
+
+Usage | Platform | Apify Documentation
+https://docs.apify.com/platform/storage/usage
+
+Dataset | Platform | Apify Documentation
+https://docs.apify.com/platform/storage/dataset
+
+Key-value store | Platform | Apify Documentation
+https://docs.apify.com/platform/storage/key-value-store
+
+Request queue | Platform | Apify Documentation
+https://docs.apify.com/platform/storage/request-queue
+
+Proxy | Platform | Apify Documentation
+https://docs.apify.com/platform/proxy
+
+Usage | Platform | Apify Documentation
+https://docs.apify.com/platform/proxy/usage
+
+Datacenter proxy | Platform | Apify Documentation
+https://docs.apify.com/platform/proxy/datacenter-proxy
+
+Residential proxy | Platform | Apify Documentation
+https://docs.apify.com/platform/proxy/residential-proxy
+
+Google SERP proxy | Platform | Apify Documentation
+https://docs.apify.com/platform/proxy/google-serp-proxy
+
+Using your own proxies | Platform | Apify Documentation
+https://docs.apify.com/platform/proxy/using-your-own-proxies
+
+Integrations | Platform | Apify Documentation
+https://docs.apify.com/platform/integrations
+
+API integration | Platform | Apify Documentation
+https://docs.apify.com/platform/integrations/api
+
+Collaboration | Platform | Apify Documentation
+https://docs.apify.com/platform/collaboration
+
+Access rights | Platform | Apify Documentation
+https://docs.apify.com/platform/collaboration/access-rights
+
+Organization account | Platform | Apify Documentation
+https://docs.apify.com/platform/collaboration/organization-account
+
+Setup | Platform | Apify Documentation
+https://docs.apify.com/platform/collaboration/organization-account/setup
+
+How to use | Platform | Apify Documentation
+https://docs.apify.com/platform/collaboration/organization-account/how-to-use
+
+List of permissions | Platform | Apify Documentation
+https://docs.apify.com/platform/collaboration/list-of-permissions
+
+Monitoring | Platform | Apify Documentation
+https://docs.apify.com/platform/monitoring
+
+Security | Platform | Apify Documentation
+https://docs.apify.com/platform/security
+
+Limits | Platform | Apify Documentation
+https://docs.apify.com/platform/limits
