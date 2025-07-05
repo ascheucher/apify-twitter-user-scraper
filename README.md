@@ -29,22 +29,25 @@ To do so, follow the instructions:
 # 1. Create (or reuse) a buildx builder that can do multi-platform builds
 docker buildx create --name multiarch --use --platform linux/amd64,linux/arm64 && \
 sleep 10 && \
-docker buildx inspect --bootstrap           # shows it is ready
+docker buildx inspect --bootstrap                       # shows it is ready
 
-# 2. Docker registry (can be skiped, when in the /etc/docker/daemon.json config)
-REGISTRY=<REGISTRY_HOST>/<NAMESPACE>        # e.g. docker-registry.example.com/team
+# 2. Define image coordinates and version tag
+REGISTRY=docker-registry.hill.eremite.cc/apify-actors   # e.g. docker-registry.example.com/team
+IMAGE=apify-twitter-user-scraper                        # repo name
+TAG=$(git rev-parse --short HEAD)                       # or $(date +%Y%m%d%H%M) / v1.2.3
 
-# 3. Define image coordinates and version tag
-IMAGE=apify-twitter-user-scraper            # repo name
-TAG=$(git rev-parse --short HEAD)           # or $(date +%Y%m%d%H%M) / v1.2.3
-
-# 4. Build and push a single manifest that contains both architectures
+# 3. Build and push a single manifest that contains both architectures
 docker buildx build \
   --platform linux/amd64,linux/arm64        \
   -t ${REGISTRY}/${IMAGE}:${TAG}            \
   -t ${REGISTRY}/${IMAGE}:latest            \
   --push .                                  # the “.” points to the Dockerfile directory
+```
 
+Optional cleanup:
+
+```zsh
+docker buildx rm multiarch          # remove builder if you no longer need it
 ```
 
 ## PlaywrightCrawler template
