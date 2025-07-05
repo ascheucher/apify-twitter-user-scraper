@@ -1,5 +1,5 @@
 {
-  "name": "Claude Code Sandbox",
+  "name": "apify-twitter-user-scraper-claude-code-sandbox",
   "build": {
     "dockerfile": "Dockerfile",
     "args": {

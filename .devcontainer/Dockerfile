@@ -1,6 +1,6 @@
 # TODO change to ../Dockerfile
 # it has already node 22 installed, look what is still needed
-FROM node:22
+FROM apify/actor-node-playwright-chrome:22-1.53.2
 # ---- dev layer built on top of the runtime stage ----
 # FROM apify/actor-node-playwright-chrome:22-1.53.2 AS builder
 # COPY --from=builder / /
@@ -28,6 +28,9 @@ RUN apt update && apt install -y less \
   dnsutils \
   aggregate \
   jq
+
+# Ensure 'node' user exists for devcontainer compatibility across images
+RUN id -u node >/dev/null 2>&1 || useradd -ms /bin/zsh node
 
 # Ensure default node user has access to /usr/local/share
 RUN mkdir -p /usr/local/share/npm-global && \
