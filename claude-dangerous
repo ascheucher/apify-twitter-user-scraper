@@ -1,0 +1,48 @@
+#!/bin/bash
+set -euo pipefail
+
+# Script to run Claude with dangerous permissions as the claude user
+# This user has no sudo privileges, making it safe for Claude Code
+
+# Function to show usage
+show_usage() {
+    echo "Usage: $0 [claude-options...]"
+    echo ""
+    echo "This script switches to the claude user (no sudo privileges) and runs Claude Code"
+    echo "with the --dangerously-skip-permissions flag."
+    echo ""
+    echo "Examples:"
+    echo "  $0                                    # Run Claude with default settings"
+    echo "  $0 --help                            # Show Claude help"
+    echo "  $0 --model claude-3-5-sonnet-20241022 # Use specific model"
+    echo "  $0 --workspace /path/to/workspace    # Set workspace"
+    echo ""
+    echo "All arguments are passed directly to the claude command."
+}
+
+# Check if help is requested
+if [[ "$*" == *"--help"* ]] || [[ "$*" == *"-h"* ]]; then
+    show_usage
+    exit 0
+fi
+
+# Check if claude user exists
+if ! id claude >/dev/null 2>&1; then
+    echo "ERROR: claude user does not exist. Please rebuild the container."
+    exit 1
+fi
+
+# Check if claude command is available
+if ! su claude -c "which claude" >/dev/null 2>&1; then
+    echo "ERROR: claude command not found for claude user. Please rebuild the container."
+    exit 1
+fi
+
+echo "Switching to claude user (no sudo privileges) and running Claude Code..."
+echo "Additional arguments: $*"
+echo ""
+
+# Switch to claude user and run claude with dangerous permissions
+# Set CLAUDE_CONFIG_DIR to use claude user's own config directory
+# Pass all arguments to the claude command
+exec su claude -c "CLAUDE_CONFIG_DIR=/home/claude/.claude claude --dangerously-skip-permissions $*" 
