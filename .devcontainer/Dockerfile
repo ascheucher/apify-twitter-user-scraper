@@ -31,9 +31,9 @@ RUN apt-get clean && \
   dnsutils \
   aggregate \
   jq \
-  curl && \
-  apt-get clean && \
-  rm -rf /var/lib/apt/lists/*
+  curl \
+  vim
+
 
 # Ensure 'node' user exists for devcontainer compatibility across images
 RUN id -u node >/dev/null 2>&1 || useradd -ms /bin/zsh node
@@ -99,7 +99,7 @@ RUN npm config set registry https://verdaccio.hill.eremite.cc && \
   npm config set fetch-retries 2 && \
   npm config set fetch-retry-mintimeout 10000 && \
   npm config set fetch-retry-maxtimeout 10000 && \
-  npm install --no-audit --force --loglevel verbose -g @anthropic-ai/claude-code
+  npm install --no-audit --force --loglevel verbose -g @anthropic-ai/claude-code backlog.md
 
 # Copy and set up firewall script (as node user, with sudo access)
 COPY init-firewall.sh /usr/local/bin/
