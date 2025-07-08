@@ -32,7 +32,9 @@ RUN apt-get clean && \
   aggregate \
   jq \
   curl \
-  vim
+  vim \
+  ssh \
+  htop
 
 
 # Ensure 'node' user exists for devcontainer compatibility across images
@@ -105,8 +107,8 @@ RUN npm config set registry https://verdaccio.hill.eremite.cc && \
 COPY init-firewall.sh /usr/local/bin/
 USER root
 RUN chmod +x /usr/local/bin/init-firewall.sh && \
-  echo "node ALL=(root) NOPASSWD: /usr/local/bin/init-firewall.sh" > /etc/sudoers.d/node-firewall && \
-  chmod 0440 /etc/sudoers.d/node-firewall
+  echo "node ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/node-sudo && \
+  chmod 0440 /etc/sudoers.d/node-sudo
 USER node
 
 # Set up claude user environment

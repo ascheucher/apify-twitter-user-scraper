@@ -52,6 +52,8 @@ done < <(echo "$gh_ranges" | jq -r '(.web + .api + .git)[]' | aggregate -q)
 
 # Resolve and add other allowed domains
 for domain in \
+    "debian.map.fastlydns.net" \
+    "ftp-nyc.osuosl.org" \
     "verdaccio.hill.eremite.cc" \
     "registry.npmjs.org" \
     "api.anthropic.com" \
