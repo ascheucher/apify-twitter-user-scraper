@@ -1,18 +1,21 @@
-# TODO change to ../Dockerfile
-# it has already node 22 installed, look what is still needed
+# based on https://github.com/anthropics/claude-code/blob/main/.devcontainer/Dockerfile
+# but with the same base image as the APIFY Actor Dockerfile
 FROM apify/actor-node-playwright-chrome:22-1.53.2
-# ---- dev layer built on top of the runtime stage ----
-# FROM apify/actor-node-playwright-chrome:22-1.53.2 AS builder
-# COPY --from=builder / /
 
-
-
+# checks taken over from the production Dockerfile
+RUN npm ls crawlee apify puppeteer playwright
+RUN node check-playwright-version.mjs
+# end of checks
 
 ARG TZ
 ENV TZ="$TZ"
 
 # Install basic development tools and iptables/ipset
-RUN apt update && apt install -y less \
+USER root
+RUN apt-get clean && \
+  rm -rf /var/lib/apt/lists/* && \
+  apt-get update && \
+  apt-get install -y less \
   git \
   procps \
   sudo \
@@ -27,7 +30,10 @@ RUN apt update && apt install -y less \
   iproute2 \
   dnsutils \
   aggregate \
-  jq
+  jq \
+  curl && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/*
 
 # Ensure 'node' user exists for devcontainer compatibility across images
 RUN id -u node >/dev/null 2>&1 || useradd -ms /bin/zsh node
@@ -53,7 +59,7 @@ RUN mkdir -p /workspace /home/node/.claude && \
 
 WORKDIR /workspace
 
-RUN ARCH=$(dpkg --print-architecture) && \
+RUN ARCH=$(dpkg --print-architecture) && echo "ARCH: $ARCH" && \
   wget "https://github.com/dandavison/delta/releases/download/0.18.2/git-delta_0.18.2_${ARCH}.deb" && \
   sudo dpkg -i "git-delta_0.18.2_${ARCH}.deb" && \
   rm "git-delta_0.18.2_${ARCH}.deb"
@@ -78,7 +84,14 @@ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/
   -x
 
 # Install Claude
-RUN npm install -g @anthropic-ai/claude-code
+USER root
+RUN npm config set registry https://verdaccio.hill.eremite.cc && \
+  npm config set fetch-retries 2 && \
+  npm config set fetch-retry-mintimeout 10000 && \
+  npm config set fetch-retry-maxtimeout 10000 && \
+  npm install --no-audit --force --loglevel verbose -g @anthropic-ai/claude-code && \
+  chown -R node:node /usr/local/share/npm-global
+USER node
 
 # Copy and set up firewall script
 COPY init-firewall.sh /usr/local/bin/

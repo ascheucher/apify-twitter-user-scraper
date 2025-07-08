@@ -2,8 +2,9 @@
   "name": "apify-twitter-user-scraper-claude-code-sandbox",
   "build": {
     "dockerfile": "Dockerfile",
+    "platform": "linux/amd64", // APIFY doesn't provide arm64 images :/
     "args": {
-      "TZ": "${localEnv:TZ:America/Los_Angeles}"
+      "TZ": "${localEnv:TZ:Europe/Vienna}"
     }
   },
   "runArgs": [
@@ -17,7 +18,8 @@
       "extensions": [
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "eamodio.gitlens"
+        "eamodio.gitlens",
+        "anthropic.claude-code"
       ],
       "settings": {
         "editor.formatOnSave": true,
@@ -38,7 +40,7 @@
       }
     }
   },
-  "remoteUser": "node",
+  "remoteUser": "root",
   "mounts": [
     "source=claude-code-bashhistory,target=/commandhistory,type=volume",
     "source=claude-code-config,target=/home/node/.claude,type=volume"
@@ -46,7 +48,11 @@
   "remoteEnv": {
     "NODE_OPTIONS": "--max-old-space-size=4096",
     "CLAUDE_CONFIG_DIR": "/home/node/.claude",
-    "POWERLEVEL9K_DISABLE_GITSTATUS": "true"
+    "POWERLEVEL9K_DISABLE_GITSTATUS": "true",
+    "NPM_CONFIG_REGISTRY": "https://verdaccio.hill.eremite.cc",
+    "NPM_CONFIG_FETCH_RETRIES": "2",
+    "NPM_CONFIG_FETCH_RETRY_MINTIMEOUT": "10000",
+    "NPM_CONFIG_FETCH_RETRY_MAXTIMEOUT": "10000"
   },
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=delegated",
   "workspaceFolder": "/workspace",

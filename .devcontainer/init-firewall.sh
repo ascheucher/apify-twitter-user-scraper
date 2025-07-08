@@ -52,23 +52,21 @@ done < <(echo "$gh_ranges" | jq -r '(.web + .api + .git)[]' | aggregate -q)
 
 # Resolve and add other allowed domains
 for domain in \
+    "verdaccio.hill.eremite.cc" \
     "registry.npmjs.org" \
     "api.anthropic.com" \
     "sentry.io" \
     "statsig.anthropic.com" \
     "statsig.com"; do
     echo "Resolving $domain..."
-    ips=$(dig +short A "$domain")
+    # Use dig to get all records and filter for A records only
+    ips=$(dig +short "$domain" | grep -E '^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$')
     if [ -z "$ips" ]; then
-        echo "ERROR: Failed to resolve $domain"
+        echo "ERROR: Failed to resolve $domain to IP addresses"
         exit 1
     fi
     
     while read -r ip; do
-        if [[ ! "$ip" =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
-            echo "ERROR: Invalid IP from DNS for $domain: $ip"
-            exit 1
-        fi
         echo "Adding $ip for $domain"
         ipset add allowed-domains "$ip"
     done < <(echo "$ips")
